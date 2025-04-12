@@ -4,7 +4,7 @@ import Link from "next/link"; // For navigation to the tool page
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen mt-16">
       {/* Hero Section */}
       <main className="flex-grow p-4 md:p-8 lg:p-12">
         <div className="max-w-7xl mx-auto">
@@ -124,6 +124,10 @@ export default function Home() {
           <a href="https://github.com/gamertechsdefi/smc-bg-generator" className="text-neutral-300 hover:underline">
             GitHub
           </a>
+          {" | "}
+          <Link href="/support" className="text-neutral-300 hover:underline">
+            Support
+          </Link>
         </p>
       </footer>
     </div>
