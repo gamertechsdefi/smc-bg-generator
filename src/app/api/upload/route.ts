@@ -78,24 +78,22 @@ async function removeBackground(fileBuffer: Buffer): Promise<Buffer> {
       url: "https://ai-background-remover.p.rapidapi.com/image/matte/v1",
       headers: {
         "x-rapidapi-host": "ai-background-remover.p.rapidapi.com",
-        "x-rapidapi-key": process.env.RAPIDAPI_KEY || "", // Add RAPIDAPI_KEY to your .env
+        "x-rapidapi-key": process.env.RAPIDAPI_KEY || "",
         "Content-Type": "application/x-www-form-urlencoded",
       },
       formData: async (buffer: Buffer) => {
         const form = new URLSearchParams();
-        // Convert buffer to base64 for RapidAPI
         const base64 = buffer.toString("base64");
         form.append("image", base64);
-        return form;
+        return form.toString(); // Convert URLSearchParams to string
       },
       processResponse: (data: Buffer) => {
-        // RapidAPI returns the image directly as a buffer
         if (!data || data.length === 0) {
           throw new Error("RapidAI returned empty response");
         }
         return data;
       },
-    },
+    }
   ];
 
   for (const api of apis) {

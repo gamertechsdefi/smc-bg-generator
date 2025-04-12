@@ -3,8 +3,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Based Gene",
-  description: "Bringing onchain closer",
+  title: "SMC Tools",
+  description: "Different community products for the SMCDAO",
 };
 
 export default function RootLayout({
