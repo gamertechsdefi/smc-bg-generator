@@ -103,7 +103,7 @@ async function removeBackground(fileBuffer: Buffer): Promise<Buffer> {
       const response = await fetch(api.url, {
         method: "POST",
         headers: api.headers,
-        body: body as BodyInit,
+        body: body, // No cast needed
       });
 
       if (!response.ok) throw new Error(`${api.name} API failed: ${response.statusText}`);
