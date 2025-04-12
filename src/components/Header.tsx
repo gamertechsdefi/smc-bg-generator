@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         <div className="flex items-center">
           <Link href="/">
             {/* <Image src="/logo.svg" alt="Logo" width={50} height={50} /> */}
-            <h1 className='text-neutral-900 font-bold text-3xl'>BASED GENE</h1>
+            <h1 className='text-neutral-900 font-bold text-3xl'>SMC Tools</h1>
           </Link>
         </div>
 
