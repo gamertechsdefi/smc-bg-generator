@@ -4,7 +4,7 @@ import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 
-const BACKEND_URL = ""; // Empty for relative paths within the same app
+// const BACKEND_URL = ""; // Empty for relative paths within the same app
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);

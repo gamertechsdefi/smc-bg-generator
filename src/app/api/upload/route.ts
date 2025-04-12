@@ -13,6 +13,8 @@ const getHeaders = (apiKey?: string): HeadersInit => {
   return apiKey ? { "X-API-Key": apiKey } : {};
 };
 
+
+
 // API configuration interface
 interface ApiConfig {
   name: string;
@@ -20,6 +22,7 @@ interface ApiConfig {
   headers: HeadersInit;
   formData: (buffer: Buffer) => Promise<FormData | string>;
   isJson?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   processResponse?: (data: any) => Buffer;
 }
 
@@ -54,6 +57,7 @@ async function removeBackground(fileBuffer: Buffer): Promise<Buffer> {
         });
       },
       isJson: true,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       processResponse: (data: any) => {
         if (!data?.result) throw new Error("WithoutBG API failed");
         return Buffer.from(data.result, "base64");
