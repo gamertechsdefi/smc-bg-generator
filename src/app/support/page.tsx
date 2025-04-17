@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaCopy } from 'react-icons/fa';
+import { Copy } from 'lucide-react';
 
 interface Wallet {
   id: number; // Added unique ID
@@ -83,7 +83,7 @@ export default function SupportPage() {
                 className="mt-2 sm:mt-0 bg-neutral-700 hover:bg-neutral-900 text-white font-semibold py-2 px-4 rounded-lg flex items-center space-x-2 transition duration-200"
                 aria-label={`Copy ${wallet.name} address`}
               >
-                <FaCopy />
+                <Copy />
                 <span>{copied === wallet.address ? 'Copied!' : 'Copy'}</span>
               </button>
             </div>
