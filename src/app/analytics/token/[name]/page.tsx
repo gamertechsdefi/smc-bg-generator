@@ -42,9 +42,9 @@ export default function TokenPage() {
                     percentage: json.percentage,
                     tier: json.tier,
                 });
-            } catch (err: any) {
-                console.error(err);
-                setError(err.message);
+            } catch {
+                console.error(error);
+                setError(error);
             } finally {
                 setLoading(false);
             }
