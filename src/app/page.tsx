@@ -53,7 +53,7 @@ export default function Home() {
               </button> */}
             </div>
             <div>
-              <Image src="/images/dtg.png" alt="Image background holder" width={200} height={200} />
+              <Image src="/images/analytics1.png" alt="Image background holder" width={200} height={200} className="rounded-md" />
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export default function Home() {
               </button>
             </div>
             <div>
-              <Image src="/images/dtg.png" alt="Image background holder" width={200} height={200} />
+              <Image src="/images/analytics.png" alt="Image background holder" width={200} height={200} className="rounded-md" />
             </div>
           </div>
         </div>
