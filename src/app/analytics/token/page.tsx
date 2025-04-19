@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Header from "@/components/Header";
 
 export default function Token() {
   const router = useRouter();
@@ -31,9 +32,10 @@ export default function Token() {
 
   return (
     <div>
-      <main className="min-h-screen flex flex-col justify-center items-center">
+      <Header />
+      <main className="pt-32 flex flex-col justify-center items-center">
         <h1 className="text-3xl font-bold">Check your holdings type</h1>
-        <p className="pb-8 flex flex-row gap-2 items-center">
+        <p className="pb-8 pt-4 flex flex-col md:flex-row md:gap-2 items-center">
           <span>Unique addresses that used this service:</span>
           <span className="font-semibold text-xl text-neutral-300">counting...</span>
         </p>
@@ -72,7 +74,7 @@ export default function Token() {
             type="submit"
             className="mt-4 px-6 py-2 bg-neutral-600 text-white rounded-md hover:bg-neutral-700"
           >
-            Analyze Token
+            Analyze position
           </button>
         </form>
       </main>

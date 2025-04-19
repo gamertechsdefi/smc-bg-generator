@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
+    <header className="bg-white py-4 shadow-md fixed w-full top-0 z-50">
       <nav className="container mx-auto px-4 py-2 flex items-center justify-between sm:px-6 sm:py-3 md:px-8 md:py-4 lg:px-10 lg:py-5">
         {/* Logo */}
         <div className="flex items-center">
@@ -22,14 +22,14 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4 sm:space-x-6 md:space-x-8 lg:space-x-10">
-          <Link href="/color-effects" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-            Color Effects
-          </Link>
           <Link href="/bg-fill" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-            BG Refill
+            Bg Replacer
           </Link>
-          <Link href="/text-effects" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
-            Text Effects
+          <Link href="/analytics" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+            Token Analytics
+          </Link>
+          <Link href="/ai-screener" className="text-gray-600 hover:text-gray-900 transition-colors duration-200">
+            AI Sceener
           </Link>
         </div>
 
@@ -61,27 +61,27 @@ const Header: React.FC = () => {
           isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
-        <div className="bg-white shadow-md px-4 py-2">
-          <Link
-            href="/color-effects"
-            className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Color Effects
-          </Link>
+        <div className="bg-white px-4 py-2">
           <Link
             href="/bg-fill"
             className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsMenuOpen(false)}
           >
-            BG Refill
+            BG Replacer
           </Link>
           <Link
-            href="/text-effects"
+            href="/analytics"
             className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsMenuOpen(false)}
           >
-            Text Effects
+            Token Analytics
+          </Link>
+          <Link
+            href="/ai-screener"
+            className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200"
+            onClick={() => setIsMenuOpen(false)}
+          >
+           AI Screener
           </Link>
         </div>
       </div>
