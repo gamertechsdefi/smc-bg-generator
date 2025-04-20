@@ -26,8 +26,8 @@ export default function Products() {
 
                     <div className="bg-neutral-200 text-neutral-900 gap-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between px-8 py-16">
                         <div className="">
-                            <h1 className="text-2xl pb-2">SMC Token Analytics</h1>
-                            <p className="text-sm pb-4">Discover details of governance data <br />Voting profile, ranks, charts</p>
+                            <h1 className="text-2xl pb-2">SMC Position Analytics</h1>
+                            <p className="text-sm pb-4">Discover your position on the fishes leaderboard at SMC projects</p>
                             <Link href="/analytics" className="bg-neutral-900 px-4 py-2 rounded-sm text-neutral-200 font-semibold">
                                 Use the analytics tool</Link>
                             {/* <button onClick={() => alert("It's soon be here, kindly check back")}
